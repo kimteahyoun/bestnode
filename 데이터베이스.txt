@@ -1,0 +1,74 @@
+create table best(
+ id int auto_increment primary key,
+ title varchar(500) not null,
+ price double default 0,
+ category varchar(100) not null,
+ linkImg varchar(500) not null,
+ isShow boolean default true,
+ wdate datetime default now()
+ );
+ 
+ 
+ 
+ 
+ insert into best(title,price,category,linkImg)
+ values(   'Mario Kart™ 8 Deluxe',
+        '59.99',
+      'Nintendo Switch',
+   'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_300/v1/ncom/en_US/games/switch/m/mario-kart-8-deluxe-switch/hero?_a=AJADJWI0');
+  
+ insert into best(title,price,category,linkImg)
+ values('TRIANGLE STRATEGY™',
+        '59.99',
+       'Nintendo Switch',
+        
+          'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_300/v1/ncom/en_US/games/switch/t/triangle-strategy-switch/hero?_a=AJADJWI0');
+  
+ insert into best(title,price,category,linkImg)
+ values('Pokémon™ Legends: Arceus',
+       '59.99',
+       'Nintendo Switch',
+      
+          'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_300/v1/ncom/en_US/games/switch/p/pokemon-legends-arceus-switch/hero?_a=AJADJWI0');
+  
+ insert into best(title,price,category,linkImg)
+ values('Super Mario™ 3D World + Bowser’s Fury',
+        '59.99',
+        'Nintendo Switch',
+          'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_300/v1/ncom/en_US/games/switch/s/super-mario-3d-world-plus-bowsers-fury-switch/hero?_a=AJADJWI0');
+  
+ insert into best(title,price,category,linkImg)
+ values('Cuphead',
+        '19.99',
+        'Nintendo Switch',
+          'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_300/v1/ncom/en_US/games/switch/c/cuphead-switch/hero?_a=AJADJWI0' );
+  
+ insert into best(title,price,category,linkImg)
+ values(  'Minecraft',
+        '29.99',
+       'Nintendo Switch',
+        
+          'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_300/v1/ncom/en_US/games/switch/m/minecraft-switch/hero?_a=AJADJWI0');
+  
+ insert into best(title,price,category,linkImg)
+ values('Mario + Rabbids® Kingdom Battle',
+       '59.99',
+         'Nintendo Switch',
+     
+        'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_300/v1/ncom/en_US/games/switch/m/mario-kart-8-deluxe-switch/hero?_a=AJADJWI0');
+  
+ insert into best(title,price,category,linkImg)
+ values('Unravel Two',
+        '59.99',
+        'Nintendo Switch',
+       
+       
+          'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_auto/c_scale,w_300/v1/ncom/en_US/games/switch/u/unravel-two-switch/hero?_a=AJADJWI0');
+  
+
+select *,format(price, 2) fprice from best where isShow=true;
+
+
+update best set isshow=false where id=4;
+
+select * from best;
